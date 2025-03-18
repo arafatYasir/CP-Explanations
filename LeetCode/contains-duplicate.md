@@ -9,6 +9,7 @@ The first strategy is simple. Most beginners will think about the brute-force so
 **Time:** O(n^2) → Since we are using nested for loops.
 
 **Space:** O(1) → Since we are not using any extra memory.
+
 **Code:**
 ```cpp
 bool containsDuplicate(vector<int> &nums)
@@ -29,7 +30,7 @@ bool containsDuplicate(vector<int> &nums)
 **Note**: If you submit this code you will get TLE.
 
 ## Strategy 2
-he second strategy is cunning. Let’s say we sort the array in ascending or even descending order. No matter how we sort the array the duplicate values will be side-by-side or adjacent values. So then we can simply check `if(nums[i] == nums[i + 1]) return true;` as simple as it is. It’s much faster than the previous solution. Since the `sort()` function in C++ takes O(n log n) time so this is faster.
+The second strategy is cunning. Let’s say we sort the array in ascending or even descending order. No matter how we sort the array the duplicate values will be side-by-side or adjacent values. So then we can simply check `if(nums[i] == nums[i + 1]) return true;` as simple as it is. It’s much faster than the previous solution. Since the `sort()` function in C++ takes O(n log n) time so this is faster.
 
 **Time:** O(n log n) → We are sorting the array and iterating over it once, so combining both of them will be O(n log n) + O(n). In these cases, we take the biggest notation.
 
